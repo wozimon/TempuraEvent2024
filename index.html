@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Новогодний арт</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Игнорируем события мыши для всех слоев */
+}
+
+.layer-1 { 
+    z-index: 1; 
+}
+
+.layer-2 { 
+    z-index: 2;
+}
+
+.layer-3 { 
+    z-index: 3;
+}
+
+.layer-4 { 
+    z-index: 4;
+}
+
+.layer-5 { 
+    z-index: 5;
+}
+
+.layer-6 { 
+    z-index: 6;
+    opacity: 0.75;
+}
+
+.layer-7 { 
+    z-index: 7;
+    mix-blend-mode: multiply; 
+    opacity: 0.37; 
+}
+
+.layer-8 {
+    z-index: 8;
+    mix-blend-mode: screen; 
+    opacity: 0.68; 
+}
+
+.sprite {
+    position: absolute;
+    cursor: pointer;
+    transition: filter 0.2s ease; /* Плавное изменение фильтра и размера */
+    pointer-events: auto; /* Разрешаем события мыши ТОЛЬКО для спрайтов */
+}
+
+.sprite:hover {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Стили для информационного окна */
+.info-box {
+    position: absolute;
+    z-index: 100; /* Окно поверх всего */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Скрыто по умолчанию */
+    
+}
+.info-box.active {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="layer layer-1">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323300602469421167/4db2bc4459bcd1b3.png?ex=67740339&is=6772b1b9&hm=124a64c1f87999c61258ae16c84421886f2b48d6b52b63309690a4743db57efd&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-2">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323300953469747221/32a3ce8ea8695a04.png?ex=6774038d&is=6772b20d&hm=409a41effcb08d2cc57d8f1d0dac040e2a1523921cf473d127f97bfb4d73b6ad&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-3">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323302696857505855/10122920bf1202c5.png?ex=6774052c&is=6772b3ac&hm=641e076b17ea6d73e39dd230c74f3b4852c099576cff8705690811c82cc584a1&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-4">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323302740809617529/d8a4f3e15ca3a88f.png?ex=67740537&is=6772b3b7&hm=e2f4a70f5017be22ce9113972d74ed08dc8fb1c6025b93a229c8aba4cfbc6d26&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-5">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323302351708356608/108010f5f99852f1.png?ex=677404da&is=6772b35a&hm=328205555dcc0ead4a6c62f13f61867eed812c91c4f373f84261e2b762fcac87&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-6">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323307395430219848/7ff72b6c3f647979.png?ex=6774098c&is=6772b80c&hm=dd8db8e611e9fea03a3dcb2695ca14aa34e88c2bc1aa40c0afec3bd5b51818e1&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-7">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323306999236268134/771a156ca9c1bc16.png?ex=6774092e&is=6772b7ae&hm=a6a1dae93096f9f6fcb4b508f17c3a38a884a486bbce2225b380f524da3c57b3&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<div class="layer layer-8">
+    <img src="https://media.discordapp.net/attachments/1323300117931102208/1323307016642498591/6c6d133363c5d75c.png?ex=67740932&is=6772b7b2&hm=e8e606e1200c5dffe95a9ae38017cd428f90e723ccb7158a7c98d01c7fdcf1a1&=&format=webp&quality=lossless" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306115957784679/194593b8c2b9269a.png?ex=6774085b&is=6772b6db&hm=0308ca2225330be34b3472a698776ee557a6efdbb7ae752b25e6f1f2f772ad73&=&format=webp&quality=lossless" 
+     class="sprite" 
+     data-name="Рорамбер" 
+     data-description="Описание персонажа 1"
+     data-layer="3.5"
+     style="width: 200px; left: -10px; top: 519px; z-index: 3;">
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306133124939898/2a36afd08c40d31f.png?ex=6774085f&is=6772b6df&hm=37598d2c12ad21534fa2f1dc490cfab5075719c17b664ad6f25ce9867e38883e&=&format=webp&quality=lossless" 
+     class="sprite" 
+     data-name="Максимлолиоп" 
+     data-description="Описание персонажа 1"
+     data-layer="3.5"
+     style="width: 115px; left: 280px; top: 390px; z-index: 3;">
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306066590568478/05552b9c3fb825ef.png?ex=67740850&is=6772b6d0&hm=5a0c093558f876e25308c6a14b474e774ffa19ab54dcaebbd5c4e093cced0d54&=&format=webp&quality=lossless" 
+     class="sprite" 
+     data-name="Данк" 
+     data-description="Описание персонажа 1"
+     data-layer="6.5"
+     style="width: 340px; left: 1060px; top: 315px; z-index: 6;">
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306043954167848/ba20b9f756893e8f.png?ex=6774084a&is=6772b6ca&hm=20ec164318b0a08382e7300c4c7637558a90dc0bb60b70394cae13b42b1af1c6&=&format=webp&quality=lossless" 
+     class="sprite" 
+     data-name="Белка" 
+     data-description="Описание персонажа 2"
+     data-layer="4.5"
+     style="width: 160px; left: 1610px; top: 430px; z-index: 4;">
+     
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306001574789161/4a062ac5fe9b99f3.png?ex=67740840&is=6772b6c0&hm=93f380c8b724eb59b507bcea3130a22c47ffd0bcef8d77b96c6fc7de7481b0f0&=&format=webp&quality=lossless" 
+     class="sprite"
+     data-name="Ася"
+     data-description="Описание персонажа 4"
+     data-layer="6.5"
+     style="width: 180px; left: 560px; top: 410px; z-index: 6;">
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306082138980422/906b170986785b32.png?ex=67740853&is=6772b6d3&hm=8fc1b3c73b67b852bf5713d24cda99de20724a7e94e2985c9a128dc76d571f15&=&format=webp&quality=lossless" 
+     class="sprite"
+     data-name="Дед"
+     data-description="Описание персонажа 3"
+     data-layer="6.5"
+     style="width: 275px; left: 395px; top: 380px; z-index: 6;">
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323302224964878396/0bea5c85c84ea3cd.png?ex=677404bc&is=6772b33c&hm=030ba0992c090cf3baf6f8a10a29f7738aab58af2ca87ef61ad306f752ab483f&=&format=webp&quality=lossless" 
+     class="sprite" 
+     data-name="Никита" 
+     data-description="Описание персонажа 1"
+     data-layer="6.5"
+     style="width: 580px; left: 1277px; top: 723px; z-index: 6;">
+
+<img src="https://media.discordapp.net/attachments/1323300117931102208/1323306164494143508/5c369c3d23562f22.png?ex=67740867&is=6772b6e7&hm=cceeb5a3143d95d774e4023201180a58501ce6e155226072ec4906e43e1ba1e8&=&format=webp&quality=lossless" 
+     class="sprite" 
+     data-name="Челка" 
+     data-description="Описание персонажа 1"
+     data-layer="6.5"
+     style="width: 250px; left: 0px; top: 645px; z-index: 6;">
+
+<div class="info-box" id="infoBox">
+  <h3 id="info-name"></h3>
+  <p id="info-description"></p>
+</div>
+
+<script>
+const sprites = document.querySelectorAll('.sprite');
+const infoBox = document.getElementById('infoBox');
+const infoName = document.getElementById('info-name');
+const infoDescription = document.getElementById('info-description');
+
+sprites.forEach(sprite => {
+  sprite.addEventListener('click', (event) => {
+    event.stopPropagation()
+    
+    const spriteZIndex = parseInt(sprite.style.zIndex);
+    infoBox.style.zIndex = spriteZIndex + 1;
+    
+    infoName.textContent = sprite.dataset.name;
+    infoDescription.textContent = sprite.dataset.description;
+
+    
+    infoBox.style.left = (sprite.offsetLeft + sprite.offsetWidth + 10) + 'px';
+    infoBox.style.top = sprite.offsetTop + 'px';
+
+    infoBox.classList.add('active');
+  });
+});
+
+document.addEventListener('click', () => {
+    infoBox.classList.remove('active');
+})
+</script>
+
+</body>
+</html>
