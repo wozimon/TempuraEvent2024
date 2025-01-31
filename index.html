@@ -11,7 +11,7 @@ body {
 .container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Высота равна высоте окна просмотра */
+  height: 100vh;
 }
 
 .layer {
@@ -20,10 +20,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Игнорируем события мыши для всех слоев */
+  pointer-events: none;
 }
-
-/* ... стили для .layer-1 - .layer-8 ... */
 
 .layer-1 {
   z-index: 1;
@@ -117,22 +115,21 @@ body {
   cursor: pointer;
   transition: filter 0.2s ease;
   pointer-events: auto;
-  /* Оставляем размеры в пикселях, т.к. они привязаны к исходному размеру спрайта */
 }
 
 .sprite:hover {
   filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
-/* Стили для информационного окна */
+
 .info-box {
   position: absolute;
-  z-index: 1000; /* Окно поверх всего */
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
-  display: none; /* Скрыто по умолчанию */
+  display: none;
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -321,8 +318,7 @@ sprites.forEach(sprite => {
     infoBox.style.zIndex = 1000;
     infoName.textContent = sprite.dataset.name;
     infoDescription.textContent = sprite.dataset.description;
-
-    // Смещения для infoBox
+    
     const xOffset = parseFloat(sprite.dataset.infoXOffset) || 0;
     const yOffset = parseFloat(sprite.dataset.infoYOffset) || 0;
 
@@ -337,7 +333,6 @@ function createComet() {
     const comet = document.createElement('div');
     comet.classList.add('comet');
     
-    // Случайные параметры для кометы
     const startX = Math.random() * 100; 
     const duration = 5 + Math.random() * 5;
     const delay = Math.random() * 15;
@@ -354,7 +349,7 @@ function createComet() {
         comet.remove();
     });
 }
-// Создание комет с интервалом
+
 setInterval(createComet, 2000);
 
 window.addEventListener('resize', () => {
